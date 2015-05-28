@@ -4,22 +4,20 @@ files:
   - source: /
     destination: /var/www/html/CODE
 permissions:
-  first:
-     - object: /var/www/html/CODE
-     pattern: "**"
-     owner: apache
-     group: apache
-     mode: 755
-     type:
-       - file
-  second:
-     - object: /var/www/html/CODE/scripts
-     pattern: "**"
-     owner: apache
-     group: apache
-     mode: 777
-     type:
-       - file
+  - object: /var/www/html/CODE
+    pattern: "**"
+    owner: apache
+    group: apache
+    mode: 755
+    type:
+      - file
+  - object: /var/www/html/CODE/scripts
+    pattern: "**"
+    owner: apache
+    group: apache
+    mode: 777
+    type:
+      - file
 hooks:
   BeforeInstall:
     - location: scripts/installapache.sh
