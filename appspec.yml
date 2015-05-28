@@ -3,12 +3,21 @@ os: linux
 files:
    - source: /
      destination: /var/www/html/CODE
+   - source: /
+     destination: /var/www/html/CODE/scripts
 permissions:
    - object: /var/www/html/CODE
      pattern: "**"
      owner: apache
      group: apache
      mode: 755
+     type:
+       - file
+   - object: /var/www/html/CODE/scripts
+     pattern: "**"
+     owner: apache
+     group: apache
+     mode: 777
      type:
        - file
 hooks:
