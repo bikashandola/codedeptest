@@ -3,7 +3,7 @@ os: linux
 files:
    - source: /
      destination: /var/www/html/CODE
-   - source: /scripts
+   - source: /CODE/scripts
      destination: /var/www/html/CODE/scripts
 permissions:
    - object: /var/www/html/CODE
