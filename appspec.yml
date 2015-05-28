@@ -13,7 +13,7 @@ permissions:
        - file
 permissions:
    - object: /var/www/html/CODE/scripts
-     pattern: "**"
+     #pattern: "**"
      owner: apache
      group: apache
      mode: 777
