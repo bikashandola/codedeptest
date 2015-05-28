@@ -1,18 +1,19 @@
 version: 0.0
 os: linux
 files:
-   - source: /
-     destination: /var/www/html/CODE
+  - source: /
+    destination: /var/www/html/CODE
 permissions:
-   - object: /var/www/html/CODE
+  first:
+     - object: /var/www/html/CODE
      pattern: "**"
      owner: apache
      group: apache
      mode: 755
      type:
        - file
-permissions1:
-   - object: /var/www/html/CODE/scripts
+  second:
+     - object: /var/www/html/CODE/scripts
      pattern: "**"
      owner: apache
      group: apache
@@ -20,7 +21,7 @@ permissions1:
      type:
        - file
 hooks:
-   BeforeInstall:
+  BeforeInstall:
     - location: scripts/installapache.sh
       runas: root
     - location: scripts/startapache.sh
