@@ -7,6 +7,7 @@ files:
      destination: /var/www/html/CODE/scripts
 permissions:
    - object: /var/www/html/CODE
+     pattern: "**"
      owner: apache
      group: apache
      mode: 755
